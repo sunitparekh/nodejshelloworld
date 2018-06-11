@@ -1,0 +1,17 @@
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+
+eval $(minikube docker-env)
+
+docker build -t hello-world-nodejs .
+
+docker build -t sunitparekh/hello-world-nodejs:1.0 .
+
+docker run -p 8080:8080 --name hello-node -d hello-world-nodejs 
+
+docker ps -a
+
+docker logs <container id>
+
+docker exec -it <container id> /bin/sh    # alpine image
+
+curl -i localhost:8080
