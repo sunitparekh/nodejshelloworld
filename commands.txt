@@ -18,3 +18,5 @@ curl -i localhost:8080
 # minikube related commands
 eval $(minikube docker-env)
 minikube ssh
+minikube dashboard
+
